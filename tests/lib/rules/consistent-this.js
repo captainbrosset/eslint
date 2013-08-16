@@ -37,7 +37,7 @@ vows.describe(RULE_ID).addBatch({
             assert.equal(messages[0].ruleId, RULE_ID);
             assert.equal(
                 messages[0].message,
-                "Unexpected alias 'context' for 'this'."
+                "Unexpected alias 'context' for 'this'. Please use 'that'"
             );
             assert.include(messages[0].node.type, "VariableDeclaration");
         }
@@ -57,7 +57,7 @@ vows.describe(RULE_ID).addBatch({
             assert.equal(messages[0].ruleId, RULE_ID);
             assert.equal(
                 messages[0].message,
-                "Unexpected alias 'that' for 'this'."
+                "Unexpected alias 'that' for 'this'. Please use 'self'"
             );
             assert.include(messages[0].node.type, "VariableDeclaration");
         }
